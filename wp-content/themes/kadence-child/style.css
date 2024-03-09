@@ -10,4 +10,41 @@ Version: 1.1.51.1709053202
 Updated: 2024-02-27 17:00:02
 
 */
-
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+body *{
+    font-family: "Syne", sans-serif;
+}
+h1{
+    font-weight: 800;
+}
+.custom-logo{
+    padding-left: 37px;
+}
+.site-container{
+    padding-right: 0;
+    padding-left: 0;
+}
+.btn-commander{
+    background-color: #DC9F96;
+    padding: 20px;
+}
+.btn-commander a{
+    color:#fff !important;
+}
+.home{   
+     background-color: #ECE2DA;
+}
+.cannette{
+    position: relative;
+    z-index: 2;
+}
+.feuille-droite{
+    position: relative;
+    top: 80px;
+    right: 228px;
+}
+.feuille-gauche{
+    position: relative;
+    top: 80px;
+    left: 259px;
+}
