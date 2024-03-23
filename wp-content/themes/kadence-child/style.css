@@ -16,6 +16,33 @@ body *{
 }
 h1{
     font-weight: 800;
+    text-transform: uppercase;
+    font-size: 38px;
+    line-height: 45.6px;
+}
+.big-title{
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.big-title-gout{
+    font-size: 48px !important;
+    font-weight: 800;
+    line-height: 58px;
+    text-align: center;
+}
+.title-testimonial{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+}
+.medium-title{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
 }
 .custom-logo{
     padding-left: 37px;
@@ -31,7 +58,7 @@ h1{
 .btn-commander a{
     color:#fff !important;
 }
-.home{   
+.home, .page-id-189{   
      background-color: #ECE2DA;
 }
 .cannette{
@@ -47,4 +74,29 @@ h1{
     position: relative;
     top: 80px;
     left: 256px
+}
+.flower{
+    position:absolute;
+    left: 10px;
+    top:200px;
+}
+.div-nous-rencontrer-flower{
+    justify-content: center;
+}
+.div-nous-rencontrer{
+    text-align: center;
+}
+.leaf{
+    position:absolute;
+    right: -8px;
+    top: 341px;   
+}
+.leaf2{
+    position:absolute;
+    left: 311px;
+    top: 1538px;
+    z-index: -1;   
+}
+.divcannette{
+    margin-bottom: 0;
 }
