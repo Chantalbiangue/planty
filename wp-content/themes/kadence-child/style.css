@@ -61,6 +61,9 @@ h1{
 .home, .page-id-189{   
      background-color: #ECE2DA;
 }
+.page-id-10{
+    background-color: #3B8E46;
+}
 .cannette{
     position: relative;
     z-index: 2;
@@ -99,4 +102,31 @@ h1{
 }
 .divcannette{
     margin-bottom: 0;
+}
+.productnumber{
+    width:39px;
+    height: 56px;
+    border-radius: 0% !important;
+    margin-top:15.64px;
+    font-size: 18px;
+    text-align: center;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.ff-t-column-2 {
+    border-left: 1px solid white;
+    padding-left: 45px;
+}
+.ff-t-column-1{
+    padding-right: 30px;
+}
+.page-id-10 .ff-t-container{
+    padding:5% 15%;
+}
+.fluent_form_4 label{
+color: #fff;
 }
