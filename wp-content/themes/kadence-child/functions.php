@@ -31,5 +31,9 @@ if ( !function_exists( 'child_theme_configurator_css' ) ):
     }
 endif;
 add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
+function add_last_nav_item($items) {
+    return "<li class= 'menu-item'> <a href=".get_admin_url().">Admin</a></li> ".$items;
+  }
+  add_filter('wp_nav_menu_items','add_last_nav_item');
 
 // END ENQUEUE PARENT ACTION
