@@ -14,6 +14,11 @@ Updated: 2024-02-27 17:00:02
 body *{
     font-family: "Syne", sans-serif;
 }
+@media(max-with:425px){
+    .productnumber {
+        width:60px !important;
+    }
+}
 h1{
     font-weight: 800;
     text-transform: uppercase;
@@ -85,7 +90,7 @@ h1{
 }
 .div-nous-rencontrer-flower{
     justify-content: center;
-}
+}.productnumber
 .div-nous-rencontrer{
     text-align: center;
 }

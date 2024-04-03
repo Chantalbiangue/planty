@@ -6,9 +6,6 @@ function theme_enqueue_styles()
 {
 
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
-
-    wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/css/theme.css', array(), filemtime(get_stylesheet_directory() . '/css/theme.css'));
-
 }
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) ) exit;
@@ -30,10 +27,22 @@ if ( !function_exists( 'child_theme_configurator_css' ) ):
         wp_enqueue_style( 'chld_thm_cfg_child', trailingslashit( get_stylesheet_directory_uri() ) . 'style.css', array( 'kadence-global','kadence-header','kadence-content','kadence-footer' ) );
     }
 endif;
-add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
-function add_last_nav_item($items) {
-    return "<li class= 'menu-item'> <a href=".get_admin_url().">Admin</a></li> ".$items;
+add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10, 2);
+function add_last_nav_item($items,$args) {
+  // Vérifie si l'utilisateur est connecté
+  if (is_user_logged_in() && $args->theme_location == 'primary') {
+        // Construit l'élément "Admin"
+        $admin_item = '<li class="menu-item"><a class="menu-link" href="' . get_admin_url(). '">Admin</a></li>';
+
+        // Trouve la position du 1er item de "</li>" dans le menu
+        $position_first_item_li = strpos($items, '</li>');
+
+        // Insère l'élément "Admin" après la première occurrence de "</li>"
+        $items = substr_replace($items, $admin_item, $position_first_item_li, 0);
+    }
+
+    return $items;
   }
-  add_filter('wp_nav_menu_items','add_last_nav_item');
+  add_filter('wp_nav_menu_items','add_last_nav_item', 10, 2);
 
 // END ENQUEUE PARENT ACTION
