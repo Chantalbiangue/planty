@@ -1,4 +1,4 @@
-<?phpon
+<?php
 /**
  * Calls in Templates using theme hooks.
  *
