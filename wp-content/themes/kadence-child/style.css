@@ -14,11 +14,7 @@ Updated: 2024-02-27 17:00:02
 body *{
     font-family: "Syne", sans-serif;
 }
-@media(max-with:425px){
-    .productnumber {
-        width:60px !important;
-    }
-}
+
 h1{
     font-weight: 800;
     text-transform: uppercase;
@@ -33,7 +29,7 @@ h1{
     text-transform: uppercase;
 }
 .big-title-gout{
-    font-size: 48px !important;
+    font-size: 48px;
     font-weight: 800;
     line-height: 58px;
     text-align: center;
@@ -134,4 +130,39 @@ input::-webkit-inner-spin-button {
 }
 .fluent_form_4 label{
 color: #fff;
+}
+@media screen and (max-width: 475px){
+    h1{
+        font-size: 26px;
+    }
+    .page-id-189 h1{
+        font-size: 21px;
+    }
+    h2,.big-title-gout{
+        font-size: 22px !important;
+    }
+    .commander-btn a{
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    .flower{
+        top:150px;
+    }
+    .form-container-rencontrer, .divwithoutpadding{
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .productcommanderdiv{
+        padding-right: 6rem !important;
+        padding-left: 6rem !important;
+    }
+    .productnumber {
+        width:60px ;
+    }
+}
+@media screen and (max-width: 1020px){
+    .form-container-rencontrer, .divwithoutpadding{
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }   
 }
